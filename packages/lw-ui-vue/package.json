@@ -1,0 +1,19 @@
+{
+  "name": "@lw8/lw-ui-vue",
+  "version": "1.0.0",
+  "description": "lw-ui-vue 组件",
+  "main": "index.ts",
+  "scripts": {
+    "build": "rimraf ../../lib && vue-tsc --noEmit && vite build"
+  },
+  "keywords": [],
+  "author": "landwind",
+  "license": "ISC",
+  "dependencies": {
+    "@lw8/foo": "workspace:^"
+  },
+  "devDependencies": {
+    "rimraf": "^5.0.5",
+    "vite-plugin-dts": "^3.7.0"
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "name": "@lw8/lw-cli",
+  "version": "1.0.0",
+  "description": "cli脚手架，快速构建组件和项目",
+  "main": "./lib/lw-ui-vue.umd.js",
+  "module": "./lib/lw-ui-vue.es.js",
+  "types": "./lib/lw-ui-vue/index.d.ts",
+  "type": "module",
+  "files": [
+    "./lib",
+    "package.json",
+    "README.md"
+  ],
+  "exports": {
+    ".":{
+      "require": "./lib/lw-ui-vue.umd.js",
+      "import": "./lib/lw-ui-vue.es.js"
+    }
+  },
+  "private": false,
+  "scripts": {
+    "dev:dev": "pnpm run -C examples dev:dev",
+    "dev:uat": "pnpm run -C examples dev:uat",
+    "dev:prod": "pnpm run -C examples dev:prod",
+    "build:dev": "pnpm run -C examples build:dev",
+    "build:uat": "pnpm run -C examples build:uat",
+    "build:prod": "pnpm run -C examples build:prod",
+    "preview:examples": "pnpm run -C examples preview",
+    "build:lib": "pnpm run -C packages/yyg-admin-ui build",
+    "docs:dev": "pnpm run -C docs dev",
+    "docs:build": "pnpm run -C docs build",
+    "docs:preview": "pnpm run -C docs serve",
+    "gen:component": "pnpm run -C cli gen",
+    "lint": "eslint \"{cli,packages,docs,examples}/**/*.{js,ts,vue,jsx,tsx}\" --fix",
+    "pub:local": "pnpm publish --registry https://npm.frp.landwind.top/"
+  },
+  "workspace": [
+    "packages/*",
+    "cli",
+    "docs",
+    "examples"
+  ],
+  "keywords": [
+    "cli",
+    "lw-cli",
+    "vue3组件",
+    "vue3项目模板"
+  ],
+  "author": "landwind",
+  "license": "ISC",
+  "dependencies": {
+    "vue": "^3.4.10"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "@typescript-eslint/eslint-plugin": "^6.18.1",
+    "@typescript-eslint/parser": "^6.18.1",
+    "@vitejs/plugin-vue": "^5.0.3",
+    "@vitejs/plugin-vue-jsx": "^3.1.0",
+    "eslint": "^8.56.0",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-n": "^15.0.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-vue": "^9.20.0",
+    "sass": "^1.69.7",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.11",
+    "vite-plugin-eslint": "^1.8.1",
+    "vue-tsc": "^1.8.27"
+  },
+  "peerDependencies": {
+    "element-plus": "^2.5.1"
+  },
+  "peerDependenciesMeta": {
+    "element-plus": {
+      "optional": true
+    }
+  }
+}
