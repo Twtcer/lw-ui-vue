@@ -26,7 +26,7 @@
     "build:uat": "pnpm run -C examples build:uat",
     "build:prod": "pnpm run -C examples build:prod",
     "preview:examples": "pnpm run -C examples preview",
-    "build:lib": "pnpm run -C packages/yyg-admin-ui build",
+    "build:lib": "pnpm run -C packages/lw-ui-vue build",
     "docs:dev": "pnpm run -C docs dev",
     "docs:build": "pnpm run -C docs build",
     "docs:preview": "pnpm run -C docs serve",

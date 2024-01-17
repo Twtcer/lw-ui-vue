@@ -6,6 +6,6 @@ export default defineConfig({
     VueJsx()
   ],
   server: {
-    port: 3100
+    port: 13100
   }
 })
