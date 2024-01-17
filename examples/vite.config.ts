@@ -6,7 +6,7 @@ import vueJsx from '@vitejs/plugin-vue-jsx'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  envDir: path.resolve(__dirname,'env'),
+  envDir: path.resolve(__dirname, 'env'),
   plugins: [
     vue(),
     vueJsx(),
@@ -18,7 +18,7 @@ export default defineConfig({
     }
   },
   server: {
-    port: 3000,
+    port: 13000,
     cors: true,
     proxy: {}
   },
